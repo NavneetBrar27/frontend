@@ -2,9 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Use import.meta.env
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
-
+// Use import.meta.env for environment variables
+const backendUrl = import.meta.env.VITE_REACT_APP_BACKEND_URL;
 
 const ProductForm = () => {
   const [name, setName] = useState("");
@@ -38,7 +37,7 @@ const ProductForm = () => {
 
     const product = { name, image, initialPrice, newPrice, description, tag };
     try {
-      const response = await axios.post(`${ backendUrl}/api/product`, product, {
+      const response = await axios.post(`${backendUrl}/api/product`, product, {
         headers: {
           "Content-Type": "application/json",
         },

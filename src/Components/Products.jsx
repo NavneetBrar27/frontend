@@ -3,8 +3,8 @@ import axios from "axios";
 import { FcLike } from "react-icons/fc";
 import { FaSearch } from "react-icons/fa";
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
-
+// Use import.meta.env for environment variables
+const backendUrl = import.meta.env.VITE_REACT_APP_BACKEND_URL;
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -211,8 +211,8 @@ const Products = () => {
         )}
       </section>
       <footer>
-            <p>©2024 Infinity ACJN CO. All rights reserved.</p>
-          </footer>
+        <p>©2024 Infinity ACJN CO. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
