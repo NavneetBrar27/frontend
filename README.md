@@ -51,6 +51,7 @@ A web-based auction platform where users can list products, delete products, pla
   - Utilizes React Router for navigation.
   - Manages state with `useState` and `useEffect` hooks.
   - Use axios to fetch data from API
+  - Integrating Tailwind CSS and React Icons for style
 - **Backend**:
   - Built with Node.js and Express.
   - Uses MongoDB Atlas for the database.
@@ -101,6 +102,7 @@ A web-based auction platform where users can list products, delete products, pla
   - Connects to a MongoDB database using Mongoose.
   - Configures middleware, including CORS and JSON parsing.
   -  Defines routes for the API, delegating product-related routes to a separate router (productRouter).
+  
 - **Product Controller (productControllers.js)**
   - Contains functions to handle CRUD operations for products:
     - getProducts: Fetches all products.
